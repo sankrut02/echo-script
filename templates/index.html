@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to Quiz Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload a PDF to Generate a Quiz</h1>
+        <form id="upload-form">
+            <input type="file" id="pdf-file" accept="application/pdf">
+            <button type="submit">Upload</button>
+        </form>
+        <div id="loading" style="display: none;">Generating Quiz...</div>
+        <div id="quiz-container"></div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
